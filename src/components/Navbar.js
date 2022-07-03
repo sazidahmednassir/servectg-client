@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = ({ children }) => {
+  const [dark, setDark] = useState(false);
   return (
-    <div class="drawer drawer-end">
+    <div class="drawer drawer-end"data-theme={dark ? "dark" : "light"}>
       <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content flex flex-col">
         {/* <!-- Navbar --> */}
@@ -78,7 +80,7 @@ const Navbar = ({ children }) => {
               </li>
 
               <label class="swap swap-rotate mx-3">
-                <input type="checkbox" data-toggle-theme="dark,light" />
+                <input type="checkbox" onClick={()=>  setDark(!dark)} />
 
                 <svg
                   class="swap-on fill-current w-10 h-10"
