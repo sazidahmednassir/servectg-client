@@ -109,14 +109,48 @@ const Navbar = ({ children }) => {
         <ul class="menu p-4 overflow-y-auto w-80 bg-base-100">
           {/* <!-- Sidebar content here --> */}
           <li>
-            {" "}
-            <NavLink to="/" className="rounded-lg">
+            <NavLink to='/' className='rounded-lg'>
               Home
             </NavLink>
           </li>
           <li>
-            <a>Sidebar Item 2</a>
+            <NavLink to='/about' className='rounded-lg'>
+              About
+            </NavLink>
           </li>
+          <li>
+            <NavLink to='/services' className='rounded-lg'>
+              Services
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to='/contact' className='rounded-lg'>
+              Contact
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to='/login' className='rounded-lg'>
+              Login
+            </NavLink>
+          </li>
+          <div
+            tabindex='0'
+            class='collapse collapse-arrow border border-base-300 bg-base-100 rounded-box'
+          >
+            <div class='collapse-title text-xl font-medium'>Book Now</div>
+            <div class='collapse-content'>
+              <li>
+                <NavLink to='/contact' className='rounded-lg'>
+                  Quick book
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to='/login' className='rounded-lg'>
+                  Pre book
+                </NavLink>
+              </li>
+            </div>
+          </div>
         </ul>
       </div>
     </div>
