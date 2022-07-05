@@ -13,6 +13,7 @@ function App() {
   }, []);
   return (
     <>
+    
       <Navbar>
         <Routes>
           {/* <Route path="/" element={<Home />} />
@@ -31,6 +32,7 @@ function App() {
           </Route>
         </Routes>
       </Navbar>
+     
     </>
   );
 }
