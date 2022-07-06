@@ -3,8 +3,12 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import AdminRoute from "./authentication/AdminRoute";
 import PrivateRoute from "./authentication/PrivateRoute";
 import Navbar from "./components/Navbar";
+import AddAdmin from "./pages/Dashboard/AddAdmin";
+import AddService from "./pages/Dashboard/AddService";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import { privateRoutes } from "./routes/privateRoutes";
 import { publicRoute } from "./routes/publicRoutes";
 function App() {
@@ -30,6 +34,12 @@ function App() {
               <Route key={index} path={path} element={<Component />} />
             ))}
           </Route>
+          <Route element={<AdminRoute />}>
+          <Route path='/dashboard' element={<Dashboard/>}>
+            <Route path='add-admin' element={<AddAdmin/>} />
+            <Route path='add-service' element={<AddService />} />
+          </Route>
+        </Route>
         </Routes>
       </Navbar>
      
